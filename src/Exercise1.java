@@ -9,16 +9,27 @@ public class Exercise1 {
         double bPar = scanner.nextFloat();
         System.out.println("Please enter the third parameter: ");
         double cPar = scanner.nextFloat();
-        double delta = (bPar * bPar)-(4 * aPar * cPar);
-        if (delta > 0) {
-            double sr = Math.sqrt(delta);
-            double xFirst = (((-1) * bPar) + sr) / (2 * aPar);
-            double xSecond = (((-1) * bPar) - sr) / (2 * aPar);
-            System.out.println("There are 2 available solutions: " + xFirst + " and " + xSecond);
-        } else if (delta == 0) {
-            System.out.println("There is only one available solution: " + (((-1) * bPar) / (2 * aPar)));
-        } else {
-            System.out.println("Unfortunately, there are no available solutions.");
+        if (aPar == 0) {
+            if (bPar != 0) {
+                double result = ((-1 * cPar) / bPar);
+                System.out.println("There is only one available solution: " + result);
+            } else {
+                System.out.println("There is no available solution!");
+            }
+        }else {
+                double delta = (bPar * bPar)-(4 * aPar * cPar);
+                if (delta > 0) {
+                    double sr = Math.sqrt(delta);
+                    double xFirst = (((-1) * bPar) + sr) / (2 * aPar);
+                    double xSecond = (((-1) * bPar) - sr) / (2 * aPar);
+                    System.out.println("There are 2 available solutions: " + xFirst + " and " + xSecond);
+                } else if (delta == 0) {
+                    System.out.println("There is only one available solution: " + (((-1) * bPar) / (2 * aPar)));
+                } else {
+                    System.out.println("Unfortunately, there are no available solutions.");
+                }
+
         }
     }
 }
+

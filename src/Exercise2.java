@@ -7,12 +7,12 @@ public class Exercise2 {
         float firstElement = scanner.nextFloat();
         System.out.println("Please enter the difference between elements in the sequence: ");
         float difference = scanner.nextFloat();
-        int elementsNumber;
+        float elementsAmount;
         do {
             System.out.println("Please enter the wanted number of elements in th sequence. please make sure to insert a natural number: ");
-            elementsNumber = scanner.nextInt();
-        } while (elementsNumber <= 0);
-        for (int i = 0; i < elementsNumber; i++){
+            elementsAmount = scanner.nextFloat();
+        } while (elementsAmount <= 0 || elementsAmount % 1 != 0);
+        for (int i = 0; i < elementsAmount; i++){
             System.out.print((firstElement + (difference * i)) + "  ");
         }
     }
