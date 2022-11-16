@@ -9,7 +9,7 @@ public class Exercise1 {
         double bPar = scanner.nextFloat();
         System.out.println("Please enter the third parameter: ");
         double cPar = scanner.nextFloat();
-        double delta = (bPar * bPar)-(4 * aPar * cPar));
+        double delta = (bPar * bPar)-(4 * aPar * cPar);
         if (delta > 0) {
             double sr = Math.sqrt(delta);
             double xFirst = (((-1) * bPar) + sr) / (2 * aPar);
