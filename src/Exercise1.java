@@ -4,31 +4,21 @@ public class Exercise1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the first parameter: ");
-        double aPar = scanner.nextFloat();
+        double aParameter = scanner.nextFloat();
         System.out.println("Please enter the second parameter: ");
-        double bPar = scanner.nextFloat();
+        double bParameter = scanner.nextFloat();
         System.out.println("Please enter the third parameter: ");
-        double cPar = scanner.nextFloat();
-        if (aPar == 0) {
-            if (bPar != 0) {
-                double result = ((-1 * cPar) / bPar);
-                System.out.println("There is only one available solution: " + result);
-            } else {
-                System.out.println("There is no available solution!");
-            }
-        }else {
-                double delta = (bPar * bPar)-(4 * aPar * cPar);
-                if (delta > 0) {
-                    double sr = Math.sqrt(delta);
-                    double xFirst = (((-1) * bPar) + sr) / (2 * aPar);
-                    double xSecond = (((-1) * bPar) - sr) / (2 * aPar);
-                    System.out.println("There are 2 available solutions: " + xFirst + " and " + xSecond);
-                } else if (delta == 0) {
-                    System.out.println("There is only one available solution: " + (((-1) * bPar) / (2 * aPar)));
-                } else {
-                    System.out.println("Unfortunately, there are no available solutions.");
-                }
-
+        double cParameter = scanner.nextFloat();
+        double delta = (bParameter * bParameter)-(4 * aParameter * cParameter);
+        if (delta > 0) {
+            double squareRoot = Math.sqrt(delta);
+            double xFirst = (((-1) * bParameter) + squareRoot) / (2 * aParameter);
+            double xSecond = (((-1) * bParameter) - squareRoot) / (2 * aParameter);
+            System.out.println("There are 2 available solutions: " + xFirst + " and " + xSecond);
+        } else if (delta == 0) {
+            System.out.println("There is only one available solution: " + (((-1) * bParameter) / (2 * aParameter)));
+        } else {
+            System.out.println("Unfortunately, there are no available solutions.");
         }
     }
 }
