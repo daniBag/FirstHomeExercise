@@ -1,27 +1,27 @@
 import java.util.Scanner;
 
 public class Exercise4 {
-    public static boolean checkIfPrimaryAndPrint (int x){
+    public static int getAmount(){
+        Scanner scanner = new Scanner(System.in);
+        float desiredAmount;
+        do {
+            System.out.println("Please enter the desired amount of primary numbers: ");
+            desiredAmount = scanner.nextFloat();
+        } while (desiredAmount <= 0 || desiredAmount % 1 != 0);
+        return (int)desiredAmount;
+    }
+    public static boolean checkIfPrimaryAndPrint (int checkNum){
         boolean check = true;
-        for (int i = 2; i < x; i++){
-            if (x % i == 0){
+        for (int i = 2; i < checkNum; i++){
+            if (checkNum % i == 0){
                 check = false;
                 break;
             }
         }
         if (check){
-            System.out.println(x);
+            System.out.println(checkNum);
         }
         return check;
-    }
-    public static int getAmount(){
-        Scanner scanner = new Scanner(System.in);
-        int desiredAmount;
-        do {
-            System.out.println("Please enter the desired number of primary numbers: ");
-            desiredAmount = scanner.nextInt();
-        } while (desiredAmount <= 0);
-        return desiredAmount;
     }
 
     public static void main(String[] args) {

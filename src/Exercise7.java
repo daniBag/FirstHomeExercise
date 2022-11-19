@@ -1,9 +1,6 @@
 public class Exercise7 {
     public static int howManyDigits (int checkNum){
         int digitsCounter = 0;
-        if (checkNum < 0){
-            checkNum = ((-1) * checkNum);
-        }
         while (checkNum > 0){
             checkNum /= 10;
             digitsCounter++;
